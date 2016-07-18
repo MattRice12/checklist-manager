@@ -12,4 +12,6 @@ class TasksController < ApplicationController
       tasks: Task.find(params[:list_id])
     }
   end
+
+  
 end

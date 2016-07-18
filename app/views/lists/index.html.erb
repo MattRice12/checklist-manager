@@ -1,7 +1,14 @@
 <% lists.each do |list| %>
   <div class='list'>
+
     <p><%= link_to list.name, list %></p>
-    <div><%= link_to("Edit List", edit_list_path(list), class: "edit-list") %>
+
+    <button type="edit" class="edit-list"><%= link_to("Edit List", edit_list_path(list), class: "edit-list") %></button>
+
+    <button type="delete" class="delete-list"><%= link_to "Delete List", list_path(list), method: :delete, data: {confirm: "Are you sure?"} %></button>
+
   </div>
+
 <% end %>
-<div><%= link_to("New List", new_list_path, class: "new-list") %>
+
+<button type="new" class="new-list"><%= link_to("New List", new_list_path, class: "new-list") %></button>
