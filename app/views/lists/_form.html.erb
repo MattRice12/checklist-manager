@@ -1,0 +1,10 @@
+<%= form_for(list) do |f| %>
+  <div><label for="body">List Name: </label></div>
+    <div><%= f.text_field :name, placeholder: "Favorite <List>" %></div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

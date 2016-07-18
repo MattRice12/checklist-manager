@@ -3,7 +3,7 @@ class TasksController < ApplicationController
     render template: 'tasks/index.html.erb', locals: {
       lists: List.all,
       tasks: Task.where(id: params[:list_id]),
-      list: List.where(id: params[:list_id]),
+      list: List.where(id: params[:list_id])
     }
   end
 
