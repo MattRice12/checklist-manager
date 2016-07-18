@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  list: one
+  complete: false
+  body: MyText
+  position: 1
+
+two:
+  list: two
+  complete: false
+  body: MyText
+  position: 1
