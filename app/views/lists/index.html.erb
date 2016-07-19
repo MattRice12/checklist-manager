@@ -1,14 +1,23 @@
-<% lists.each do |list| %>
-  <div class='list'>
 
-    <p><%= link_to list.name, list %></p>
+<div class="container list-set-block">
+  <% lists.each do |list| %>
+    <div class='row list'>
+      <div class="twelve colomn">
 
-    <button type="edit" class="edit-list"><%= link_to "Edit List", edit_list_path(list) %></button>
+        <div class="six colomn title">
+          <%= link_to list.name, list %>
+        </div>
 
-    <button type="delete" class="delete-list"><%= link_to "Delete List", list_path(list), method: :delete, data: {confirm: "Are you sure?"} %></button>
+        <div class="six colomn buttons">
+          <button type="edit" class="button-primary edit-list"><%= link_to "Edit List", edit_list_path(list) %></button>
 
-  </div>
+          <button type="delete" class="button-primary delete-list"><%= link_to "Delete List", list_path(list), method: :delete, data: {confirm: "Are you sure?"} %></button>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
-<% end %>
-
-<button type="new" class="new-list"><%= link_to "New List", new_list_path %></button>
+<div class='new-button-block'>
+  <button type="new" class="new-list"><%= link_to "New List", new_list_path %></button>
+</div>

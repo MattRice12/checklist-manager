@@ -1,0 +1,80 @@
+@import 'variables';
+
+div {
+  h6 {
+    background-color: white;
+    height: 50px;
+    border: 1px solid $border-color;
+    padding-top: 5px;
+    .title {
+      text-align: center;
+      position: relative;
+      left: 40%;
+      top: 10px;
+      text-decoration: none;
+      color: black;
+      &:hover{
+        text-decoration: underline;
+        color: $main-color;
+      }
+    }
+    .home {
+      float: left;
+      height: 40px;
+      color: black;
+      position: relative;
+      top: 5px;
+      left: 8.1%;
+      text-decoration: none;
+      color: black;
+      &:hover{
+        text-decoration: underline;
+        color: $main-color;
+      }
+      img {
+        height: 25px;
+        position: relative;
+        bottom: -2px;
+        padding-left: 10px;
+        width: auto;
+      }
+    }
+    .new-task {
+      float: right;
+      position: relative;
+      top: 10px;
+      right: 8.5%;
+      padding-right: 10px;
+    }
+    .new-list {
+      float: right;
+      position: relative;
+      top: 10px;
+      right: 8.5%;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .home {
+    visibility: hidden;
+    img {
+      visibility: visible;
+      left: -40%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .title {
+    visibility: hidden;
+  }
+  .home {
+    visibility: hidden;
+    img {
+      visibility: visible;
+    }
+  }
+
+}

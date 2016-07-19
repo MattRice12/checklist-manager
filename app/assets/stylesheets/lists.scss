@@ -1,3 +1,51 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.list-set-block {
+  width: 40%;
+  .title {
+    float: left;
+  }
+  .buttons {
+    float: right;
+    border: none;
+    .delete-list {
+      float: right;
+      border: 2px solid black;
+      padding: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        position: relative;
+        bottom: 5px;
+        color: black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .edit-list {
+      float: right;
+      border: 2px solid black;
+      color: black;
+      padding: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      a {
+        color: black;
+        position: relative;
+        bottom: 5px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.new-button-block {
+}

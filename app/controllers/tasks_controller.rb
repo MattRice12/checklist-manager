@@ -1,4 +1,4 @@
-class TasksController < ApplicationController
+
   def index
     render template: 'tasks/index.html.erb', locals: {
       tasks: Task.where(list_id: params[:list_id]),

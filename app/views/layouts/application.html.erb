@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <header class="twitter-head">
+      <div class="container-fluid">
+        <div class="row">
+          <div clas="col-md-5".col-md-offset-3>
+            <%= render "shared/nav" unless @disable_nav %>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

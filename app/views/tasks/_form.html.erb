@@ -1,6 +1,6 @@
 <h2><%= form_title %></h2>
 
-<%= form_for [list, task] do |f| %>
+<%= form_for (list, task) do |f| %>
   <div><label for="body">List: </label></div>
     <div><%= f.select :list_id %></div>
 
