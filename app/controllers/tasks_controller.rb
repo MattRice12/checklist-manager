@@ -23,13 +23,17 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new(task_params)
-    task.list_id = params[:task][:list_id]
+    task.list_id = params[:list_id]
+    task.body = params[:task][:body]
+    task.complete = params[:task][:complete]
     task.position = Task.count + 1
     if task.save
-      redirect_to list_task_path(params[:list_id], task)
+      redirect_to root_path
     else
-      flash[:alert] = "Could not be created due to errors."
+      flash[:alert] = "Could not create due to errors."
       render template: 'tasks/new.html.erb', locals: {
+        task: Task.new,
+        list: List.find(params[:list_id])
       }
     end
   end

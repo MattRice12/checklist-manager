@@ -18,6 +18,9 @@
         </div>
       </div>
     </header>
+      <% flash.each do |key, value| %>
+        <p> <%= "#{key.titleize}: #{value}" %></p>
+      <% end %>
     <%= yield %>
   </body>
 </html>
