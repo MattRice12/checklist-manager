@@ -1,9 +1,8 @@
 class TasksController < ApplicationController
   def index
     render template: 'tasks/index.html.erb', locals: {
-      lists: List.all,
-      tasks: Task.where(id: params[:id]),
-      list: List.where(id: params[:id])
+      tasks: Task.where(list_id: params[:list_id]),
+      list: List.find(params[:list_id])
     }
   end
 
@@ -18,41 +17,36 @@ class TasksController < ApplicationController
   def new
     render locals: {
       task: Task.new,
-      list: List.where(id: params[:id])
+      list: List.find(params[:list_id])
     }
   end
 
   def create
-    task = Task.new
+    task = Task.new(task_params)
     task.list_id = params[:task][:list_id]
-    task.body = params[:task][:body]
-    task.complete = params[:task][:complete]
-    task.position = params[:task][:position]
     if task.save
-      redirect_to root_path
+      redirect_to list_task_path(params[:list_id], task)
     else
       flash[:alert] = "Could not be created due to errors."
       render template: 'tasks/new.html.erb', locals: {
-        task: task,
-        list: List.where(id: params[:list_id])
       }
     end
   end
 
   def edit
     render locals: {
-      task: Task.find(params[:list_id])
+      task: Task.find(params[:id])
     }
   end
 
   def update
-    task = Task.find(params[:list_id])
+    task = Task.find(params[:id])
     task.list_id = params[:task][:list_id]
     task.body = params[:task][:body]
     task.complete = params[:task][:complete]
     task.position = params[:task][:position]
     if task.save
-      redirect_to root_path
+      redirect_to list_task_path(params[:list_id], task)
     else
       render template: "/task/edit.html.erb", locals: {
         task: task
