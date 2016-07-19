@@ -9,15 +9,16 @@
         </div>
 
         <div class="six colomn buttons">
+          <button type="delete" class="button-primary delete-list"><%= link_to "Delete List", list_path(list), method: :delete, data: {confirm: "Are you sure?"} %></button>
+
           <button type="edit" class="button-primary edit-list"><%= link_to "Edit List", edit_list_path(list) %></button>
 
-          <button type="delete" class="button-primary delete-list"><%= link_to "Delete List", list_path(list), method: :delete, data: {confirm: "Are you sure?"} %></button>
         </div>
       </div>
     </div>
   <% end %>
 </div>
 
-<div class='new-button-block'>
-  <button type="new" class="new-list"><%= link_to "New List", new_list_path %></button>
+<div class='six colomn buttons2'>
+  <button type="new" class="button-primary new-list-button"><%= link_to "New List", new_list_path %></button>
 </div>

@@ -1,7 +1,7 @@
 <div>
   <h6>
     <span><%= link_to("Checklist manageR", root_path, class: "title") %></span>
-    <span><%= link_to("List", new_list_path, class: "new-list") %></span>
+    <button type="new" class="button-primary new-list"><%= link_to("New List", new_list_path) %></button>
     <span><%= link_to(root_path, class: "home") do %></span>
       <%= image_tag("https://cdn4.iconfinder.com/data/icons/roundies-2/32/birdhouse-512.png") %>
       <%= "Home" %>

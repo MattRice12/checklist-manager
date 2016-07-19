@@ -9,6 +9,10 @@ div {
     .title {
       text-align: center;
       position: relative;
+      font-weight: bold;
+      border-bottom: 2px solid black;
+      padding: 5px;
+      font-size: 125%;
       left: 40%;
       top: 10px;
       text-decoration: none;
@@ -48,10 +52,24 @@ div {
     }
     .new-list {
       float: right;
-      position: relative;
-      top: 10px;
-      right: 8.5%;
-      padding-right: 10px;
+      border: 2px solid black;
+      color: black;
+      padding: 5px 57px 5px 57px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 8.5%;
+      &:hover {
+        border: 2px solid black;
+      }
+      a {
+        color: black;
+        position: relative;
+        bottom: 5px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }

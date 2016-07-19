@@ -15,8 +15,13 @@
       float: right;
       border: 2px solid black;
       padding: 5px;
+      margin: 0 5px 10px 5px;
+
       font-weight: bold;
       text-decoration: none;
+      &:hover {
+        border: 2px solid black;
+      }
       a {
         text-decoration: none;
         position: relative;
@@ -32,8 +37,12 @@
       border: 2px solid black;
       color: black;
       padding: 5px;
+      margin: 0 5px 0 5px;
       font-weight: bold;
       text-decoration: none;
+      &:hover {
+        border: 2px solid black;
+      }
       a {
         color: black;
         position: relative;
@@ -47,5 +56,27 @@
   }
 }
 
-.new-button-block {
+.buttons2 {
+  border: none;
+  .new-list-button {
+    float: right;
+    border: 2px solid black;
+    color: black;
+    padding: 5px 57px 5px 57px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 30.3%;
+    &:hover {
+      border: 2px solid black;
+    }
+    a {
+      color: black;
+      position: relative;
+      bottom: 5px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
