@@ -1,5 +1,7 @@
-<p><%= "Task: " task.body %></p>
-<p><%= "Completed? " task.complete %></p>
-<p><%= "Position: " task.position %></p>
+<p><%= "Task: " + task.body %></p>
+<p><%= "Completed? " + task.complete.to_s %></p>
+<p><%= "Position: " + task.position.to_s %></p>
 
-<button> <%= link_to("Back", lists_path(list)) %> </button>
+<button> <%= link_to("Back", list) %> </button>
+
+<button type="new" class="new-task"><%= link_to "New Task", new_list_task_path %></button>

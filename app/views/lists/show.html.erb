@@ -1,8 +1,10 @@
 <p><%= list.name %></p>
   <% list.tasks.each do |task| %>
   <div class='tasks'>
-    <p><%= link_to(task.body, list_task_path(task)) %></p>
+    <p><%= link_to(task.body, list_task_path(list, task)) %></p>
   </div>
 <% end %>
 
 <button> <%= link_to("Back", root_path) %> </button>
+
+<button type="new" class="new-task"><%= link_to "New Task", new_list_task_path(tasks) %></button>

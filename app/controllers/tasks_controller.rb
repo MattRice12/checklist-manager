@@ -9,7 +9,9 @@ class TasksController < ApplicationController
 
   def show
     render template: 'tasks/show.html.erb', locals: {
-      tasks: Task.find(params[:id])
+      tasks: Task.where(id: params[:id]),
+      task: Task.find(params[:id]),
+      list: List.find(params[:list_id])
     }
   end
 
