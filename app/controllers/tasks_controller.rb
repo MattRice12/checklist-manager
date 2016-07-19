@@ -22,7 +22,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new
+    task = Task.new(task_params)
     task.list_id = params[:task][:list_id]
     task.position = Task.count + 1
     if task.save
@@ -59,5 +59,10 @@ class TasksController < ApplicationController
     task = Task.find(params[:list_id])
     task.destroy
     redirect_to root_path, :notice => "Your task has been deleted"
+  end
+
+  private
+  def task_params
+    params.require(:task).permit(:body)
   end
 end
