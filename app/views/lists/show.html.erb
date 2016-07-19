@@ -1,7 +1,7 @@
 <p><%= list.name %></p>
   <% list.tasks.each do |task| %>
   <div class='tasks'>
-    <p><%= link_to(task.body, list_tasks_path(task)) %></p>
+    <p><%= link_to(task.body, list_task_path(task)) %></p>
   </div>
 <% end %>
 

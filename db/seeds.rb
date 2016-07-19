@@ -11,9 +11,8 @@ lists = ["Stuff I like", "Stuff I hate", "Stuff That Reminds Me How Much I Hate 
 
 stuff = ["Kittens", "Dogs", "Elephants", "Giraffes", "Free Popcorn", "New Movies", "Britney Spears", "Coffee", "Pokemon", "Coding", "Cars", "Bikes", "Dinosaurs", "Birds", "Kangaroos", "Food", "Eggs", "Beaks", "Beakers", "Aardvarks", "Rocky Balboa", "Arnold Schwarzenegger", "Batman", "Spiderman", "Superman", "Pens", "Clouds", "Grass", "Trees", "Websites", "URLs", "Bootstrap", "Skeleton", "Ghosts", "Halloween", "Tigers", "Lions"]
 
-count = 0
-
 lists.each do |list_name|
+  count = 0
   list = List.create!(name: "#{list_name}")
 
   5.times do
