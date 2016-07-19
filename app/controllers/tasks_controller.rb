@@ -1,4 +1,4 @@
-
+class TasksController < ApplicationController
   def index
     render template: 'tasks/index.html.erb', locals: {
       tasks: Task.where(list_id: params[:list_id]),
@@ -22,8 +22,9 @@
   end
 
   def create
-    task = Task.new(task_params)
+    task = Task.new
     task.list_id = params[:task][:list_id]
+    task.position = Task.count + 1
     if task.save
       redirect_to list_task_path(params[:list_id], task)
     else

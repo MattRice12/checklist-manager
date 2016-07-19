@@ -1,17 +1,12 @@
 <h2><%= form_title %></h2>
 
-<%= form_for (list, task) do |f| %>
-  <div><label for="body">List: </label></div>
-    <div><%= f.select :list_id %></div>
+<%= form_for([list, task]) do |f| %>
 
   <div><label for="body">Task: </label></div>
     <div><%= f.text_field :body, placeholder: "Tie shoes" %></div>
 
   <div><label for="body">Completed? </label></div>
     <div><%= f.check_box :complete %></div>
-
-  <div><label for="body">Task: </label></div>
-    <div><%= f.select :position %></div>
 
   <div class="actions">
     <%= f.submit %>
